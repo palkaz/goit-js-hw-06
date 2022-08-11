@@ -13,6 +13,6 @@ ingredients.forEach(function (el) {
   listIngEl.textContent = el;
   list.append(listIngEl);
   listIngEl.classList.add("item");
-  // console.log(el);
+  console.log(el);
   // console.log(index);
 });
