@@ -40,12 +40,15 @@ const galImgEl = images
       `<li><img class="gallery-list" src="${url}" alt="${alt}" width = "200"/></li>`
   )
   .join("");
-// console.log(galImgEl);
+// console.log(galImgEl); вариант2 через reduce
+// Я его плохо понял, но запишу буду разбираться в процессе
+// const galImgEl = images.reduce(
+//   (html, { url, alt }) => (html += `<li><img src="${url}" width=200></li>`),
+//   ""
+// );
 
 const galGroupList = document.querySelector(".gallery");
 galGroupList.insertAdjacentHTML("beforeend", galImgEl);
 galGroupList.style.cssText =
   "list-style: none;display: flex;flex-direction: row;align-items: center;justify-content: space-around;";
 console.log(galGroupList);
-
-0;
