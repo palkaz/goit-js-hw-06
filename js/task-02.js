@@ -7,12 +7,18 @@ const ingredients = [
   "Condiments",
 ];
 const list = document.querySelector("#ingredients");
-const listIngEl = document.createElement("li");
-ingredients.forEach(function (el) {
-  const listIngEl = document.createElement("li");
-  listIngEl.textContent = el;
-  list.append(listIngEl);
-  listIngEl.classList.add("item");
-  console.log(el);
-  // console.log(index);
-});
+// const listIngEl = document.createElement("li");
+// ingredients.forEach(function (el) {
+//   const listIngEl = document.createElement("li");
+//   listIngEl.textContent = el;
+//   list.append(listIngEl);
+//   listIngEl.classList.add("item");
+//   console.log(el);
+//   // console.log(index);
+// });
+
+const listIngEl =ingredients.map(
+    ingredient =>
+      `<li class="item">${ingredient}</li>`)
+      .join("");
+list.insertAdjacentHTML("beforeend", listIngEl);
