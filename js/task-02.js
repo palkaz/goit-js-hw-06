@@ -23,13 +23,17 @@ const list = document.querySelector("#ingredients");
 //       `<li class="item">${ingredient}</li>`)
 //       .join("");
 // list.insertAdjacentHTML("beforeend", listIngEl);
-// вар3 через распыление
 
- const listIngEl =ingredients.map(
-      ingredient =>
-      document.createElement("li")
-  .listIngEl.textContent(ingredient)
-      .listIngEl.classList.add("item")
-      )
-        .join("");
-       list.append(...listIngEl); 
+// вар3 через распыление
+let  mainList = [];
+       ingredients.map(function (el) {
+          let listIngEl = document.createElement("li");
+          listIngEl.classList.add("item");
+          listIngEl.textContent = el;
+          mainList.push(listIngEl);
+                    return ;
+        
+        });
+        // console.log(mainList);
+        list.append(...mainList);
+        
